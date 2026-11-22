@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><style>
+@page{size:A4;margin:16mm}body{font-family:Arial,sans-serif;color:#0a1931;font-size:14px;line-height:1.6}h1{font-size:27px;margin:10px 0}h2{font-size:17px}.logo{max-width:220px;max-height:110px}header{border-bottom:2px solid #c8a96e;padding-bottom:12px}table{border-collapse:collapse;width:100%;text-align:right}td,th{padding:8px;border-bottom:1px solid #e1e5eb}th{background:#edf0f5}p{margin:5px 0}.transfer{background:#f2f4f8;padding:12px 16px}.number{direction:ltr;unicode-bidi:embed}
+</style></head><body>
+<header><img class="logo" src="<?= logo ?>" alt=""><p><?= settings[0] ?></p><p>تصريح العمل الحر <bdi><?= settings[1] ?></bdi></p></header>
+<h1>فاتورة خدمة</h1>
+<p>رقم الفاتورة <bdi><?= data[0] ?></bdi></p><p>الإصدار والاستحقاق <bdi><?= data[1] ?></bdi></p><p>حالة السداد <?= data[11] ?></p>
+<h2>بيانات الجمعية</h2><p><?= data[2] ?></p><p><?= data[3] ?></p><p><bdi><?= data[4] ?></bdi> · <bdi><?= data[5] ?></bdi></p>
+<h2>تفاصيل الخدمة</h2><table><tr><th>الباقة</th><th>المبلغ المستحق</th></tr><tr><td><?= data[6] ?><br><?= plan[3] ?><br><?= plan[4] ?></td><td><?= data[7] ?> ريال سعودي</td></tr></table>
+<? if (plan[2] > 1) { ?><p>الدفعة الأولى من <?= plan[2] ?> · إجمالي الاشتراك <?= data[8] ?> ريال سعودي.</p><? } ?>
+<p>ضريبة القيمة المضافة المحصّلة ٠ ريال.</p>
+<h2>التحويل البنكي</h2><div class="transfer"><p>الجهة <?= settings[2] ?></p><p>المستفيد <?= settings[3] ?></p><p>الآيبان <bdi><?= settings[4] ?></bdi></p><p>أدرج رقم الفاتورة في وصف التحويل لتسهيل مطابقة السداد.</p></div>
+</body></html>
