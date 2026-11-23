@@ -30,3 +30,8 @@ section[id], article[id] { scroll-margin-top: 90px; }
   .hero { grid-template-columns: 1fr; }
   .hero-logo { width: min(100%, 270px); margin: 0 auto; }
 }
+
+@media (min-width: 901px) {
+  .nav nav { flex-wrap: wrap; column-gap: clamp(12px, 1.6vw, 24px); row-gap: 4px; }
+  .nav nav a, .nav > .btn { white-space: nowrap; }
+}
